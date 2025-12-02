@@ -7,9 +7,6 @@
         body {
             font-family: Calibri, Arial, sans-serif;
             color: #002a02;
-            background-color: rgb(96, 178, 96);
-            background-image: radial-gradient(circle, rgb(65, 121, 65), rgb(96, 178, 96), rgb(111, 207, 111));
-            
             margin: 0;
             padding: 20px;
         }
@@ -34,11 +31,20 @@
             background: rgba(21, 206, 11, 0.212);
             max-width: 1000px;
         }
-
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <script>
+        function toggleDarkMode(){
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <button onclick="toggleDarkMode()">Change Background Mode</button>
 
     <h1>This is Dexter Blanchard's Website</h1>
     
