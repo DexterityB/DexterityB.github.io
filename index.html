@@ -2,13 +2,79 @@
 <html>
 <head>
     <title>Dexter Blanchard's Website</title>
+
+
+     <style>
+        .container {
+            width: min(95%, 1200px);
+            margin: auto;
+            padding: clamp(20px, 5vw, 60px);
+        }
+
+        h1, h2, a {
+            font-family: "Courier New", monospace;
+            letter-spacing: 1px;
+        }
+
+        h1, .button {
+            color: #000000;
+            border-left: 4px solid #fc3d21;
+            padding-left: 12px;
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
+        }
+
+        h2 {
+            color: #fc3d21;
+            margin-top: 30px;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+        }
+
+        p, li {
+            line-height: 1.6;
+            color: #000000;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 18px;
+                margin-bottom: 25px;
+            }
+
+            ul {
+                margin-left: 14px;
+            }
+        }
+    </style>
+
+
     <style>
         body {
             font-family: Calibri, Arial, sans-serif;
-            color: #002a02;
             margin: 0;
             padding: 0;
             width: 100%;
+            font-family: Arial, sans-serif;
+            color: #000000;
+
+            background: #450C2B;
+
+            transition: 0.4s ease-in-out;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background:  linear-gradient(
+                to right, 
+                #aaaaaa,
+                #888888
+            );
+            border: 1px solid #000000;
         }
         p {
             line-height: 1.6;
@@ -22,24 +88,75 @@
         section {
             margin-bottom: 40px;
             padding: 25px;
-            border-radius: 12px;
-            border: 1px solid rgb(1, 53, 3);
-            background: rgba(21, 206, 11, 0.212);
+            background-color: #19BF64;
             max-width: 2000px;
+
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 12px;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+
+            box-shadow: 0 0 20px rgba(27, 255, 108, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
+
+        section > section {
+            background-color: rgb(2, 76, 8);
+        }
+
+        a {
+            color: #308038;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            transform: translateY(-4px);
+            color: #45a84f;
+        }
+
+        .button {
+            background-color: rgba(15, 80, 35, 0.75);
+            color: #000000;
+            margin-bottom: 40px;
+            margin-right: 20px;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 24px;
+
+            box-shadow: 0 0 20px rgba(27, 255, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img {
+            max-width: 85px;
+            height: 85px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <script>document.body.classList.toggle('dark-mode');</script>
+    <a class="button">Home</a>
+    <a href="design.html" class="button">Design</a>
+    <a href="next.html" class="button">Next Steps</a>
+    <a href="team.html" class="button">Team</a>
 
-    <h1>This is Dexter Blanchard's Website</h1>
-    
+    <header>
+        <h1>This is Dexter Blanchard's Website</h1>
+    </header>
+
     <section>
     <h3>About Me</h3>
         <p>I'm currently a Senior at Lakewood high school, and a member of the computer science and cybersecurity program at Warren Tech. I play tennis as well as perform in Lakewood High School's marching band.<br>
@@ -56,8 +173,12 @@
 
     <section>
         <h3>My Accounts</h3>
-        <a href="https://www.linkedin.com/in/dexter-blanchard-292526386" target=”_blank”><img width="160" height="160" src="https://upload.wikimedia.org/wikipedia/commons/0/06/Linkedin_circle_black-512.png" alt="LinkedIn Logo"></a>
-        <a href="https://github.com/DexterityB" target=”_blank”><img width="280" height="160" src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" alt="GitHub Logo"></a>
+        <section>
+            <a href="https://www.linkedin.com/in/dexter-blanchard-292526386" target=”_blank”><img width="160" height="160" src="logos/linkedin.png" alt="LinkedIn Logo"></a>
+        </section>
+        <section>
+            <a href="https://github.com/DexterityB" target=”_blank”><img width="280" height="160" src="logos/github.png" alt="GitHub Logo"></a>
+        </section>
     </section>
 </div>
 </body>
