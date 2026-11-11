@@ -1,0 +1,122 @@
+body {
+    font-family: Calibri, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #dddddd;
+
+    background: linear-gradient(to right, #226644, #449966, #449966, #226644) 0% 0% / 400% 400%;
+    animation: 30s ease 0s infinite normal none running gradient;
+
+    transition: 0.4s ease-in-out;
+}
+
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.container {
+    margin: clamp(20px, 5vw, 60px);
+}
+
+h1, a {
+    font-family: "Courier New", monospace;
+    letter-spacing: 1px;
+}
+
+h1, .button {
+    color: #88ccaa;
+    border-left: 4px solid #a75e69;
+    padding-left: 12px;
+    font-size: 2.75rem;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background:  linear-gradient(to right, #113322, #335544);
+    border: 1px solid #000000;
+}
+
+p, li {
+    line-height: 1.6;
+    color: 
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.15);
+
+    max-width: 2000px;
+
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 0 20px rgba(27, 255, 108, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box {
+    display: flex;
+    width: 320px;
+    gap: 20px;
+}
+
+.box-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    color: #308038;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-4px);
+    color: #88ccaa;
+}
+
+.button {
+    color: #a75e69;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: bold;
+    display: inline-block;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.25rem;
+
+    box-shadow: 0 0 20px rgba(27, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img {
+    max-width: 85px;
+    height: 85px;
+    margin: 20px auto;
+    border-radius: 10px;
+    filter: invert(75%);
+}
+img:hover {
+    transform: scale(1.05);
+    filter: invert(25%);
+}
